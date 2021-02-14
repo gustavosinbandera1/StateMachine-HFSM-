@@ -1,5 +1,6 @@
 #pragma once
-//#include "state.h"
+
+class EvDefault;
 class State;
 class Event
 {
@@ -12,7 +13,7 @@ public:
 };
 
 
-/* 
+
 class EvModeBtn : public Event {
     public:
     virtual bool processFrom(State *state);
@@ -31,7 +32,7 @@ class EvPowerBtn : public Event {
 class EvOne : public Event {
     public:
     virtual bool processFrom(State *state);
-}; */
+}; 
 
 
 //extern EvDefault aEvDefault;

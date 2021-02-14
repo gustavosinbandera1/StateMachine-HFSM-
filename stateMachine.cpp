@@ -1,9 +1,12 @@
 #include "stateMachine.h"
+#include "EvDefault.h"
+
+extern EvDefault aEvDefault;
 
 bool StateMachine::dispatchEvent(Event *event)
 {
     bool retavl = activeSubstate->dispatchEvent(event) || event->processFrom(this);
-    //aEvDefault.processFrom(this);
+    aEvDefault.processFrom(this);
     return retavl;
 }
 

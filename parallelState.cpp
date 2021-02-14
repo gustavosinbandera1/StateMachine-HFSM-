@@ -1,6 +1,5 @@
 #include "parallelState.h"
 
-
 /* ParallelState::ParallelState(int noOfRegions) : noOfRegions(noOfRegions), regions(nullptr)
 {
     regions = new State *[noOfRegions];

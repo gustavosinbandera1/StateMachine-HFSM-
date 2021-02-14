@@ -1,5 +1,8 @@
+#pragma once
+
 #include "events.h"
 #include "state.h"
+
 
 class EvDefault : public Event
 {

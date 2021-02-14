@@ -1,21 +1,28 @@
-/* #pragma once
+#pragma once
 #include "state.h"
 
 class StateCooler : public State
 {
 public:
-    StateCooler(int noOf);
-    virtual ~ParallelState();
+    StateCooler(int noOf){
+        this->noOfRegions = noOf;
+    };
+    virtual ~StateCooler(){};
 
     virtual bool dispatchEvent(Event *event);
     virtual void entry(void);
     virtual void exit(void);
     virtual void restoreDeepHistory(void);
     virtual void restoreShallowHistory();
+
 protected:
     int noOfRegions;
     State **regions;
+
+    void onEntryAction();
+    void onExitAction();
+
 private:
-    //ParallelState(const ParallelState &);
-    //ParallelState& operator=(const ParallelState &);
-}; */
+    StateCooler(const StateCooler &);
+    StateCooler &operator=(const StateCooler &);
+};
