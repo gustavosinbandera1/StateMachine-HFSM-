@@ -14,7 +14,6 @@ void State::exit(void)
 {
     this->onExitAction();
 }
-
 void State::onEntryAction(void)
 {
     return;
@@ -24,11 +23,11 @@ void State::onExitAction(void)
     return;
 }
 
-void State::setInitDefaultState(void)
+ void State::setInitDefaultState(void)
 {
     return;
 }
-
+ 
 void State::setDeepHistoryDefaultState(void)
 {
     return;
@@ -49,7 +48,11 @@ void State::restoreShallowHistory(void)
 {
     return;
 }
+ 
 
+
+
+ 
 /* StateMachine::StateMachine(void) : activeSubstate(nullptr), previousSubstate(nullptr)
 {
     return;

@@ -1,4 +1,4 @@
-/* #include "state.h"
+#include "state.h"
 
 class StateMachine : public State
 {
@@ -6,8 +6,8 @@ public:
     StateMachine(void){
         activeSubstate = nullptr;
         previousSubstate = nullptr;
-    };
-    virtual ~StateMachine(){return;};
+    }; 
+    virtual ~StateMachine() override {return;};
 
     bool dispatchEvent(Event *event) override;
     void entry(void) override;
@@ -23,4 +23,4 @@ private:
     StateMachine(const StateMachine &);
     StateMachine &operator=(const StateMachine &);
 };
-  */
+  
