@@ -1,10 +1,10 @@
 #pragma once
 #include "state.h"
 
-class StateCooler : public State
+class StateFan : public State
 {
 public:
-    StateCooler(int noOf){
+    StateFan(int noOf){
         this->noOfRegions = noOf;
     };
     virtual ~StateCooler(){};
@@ -25,6 +25,6 @@ protected:
     void onExitAction();
 
 private:
-    StateCooler(const StateCooler &);
-    StateCooler &operator=(const StateCooler &);
+    StateFan(const StateFan &);
+    StateFan &operator=(const StateFan &);
 };

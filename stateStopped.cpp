@@ -1,19 +1,19 @@
-#include "stateCooler.h"
+#include "stateStopped.h"
 #include <iostream>
 using namespace std;
 
 
-void StateCooler::onEntryAction()
+void StateStopped::onEntryAction()
 {
     std::cout << "onEntryCooler Action" << std::endl;
 }
 
-void StateCooler::onExitAction()
+void StateStopped::onExitAction()
 {
     std::cout << "onExitCooler Action" << std::endl;
 }
 
-bool StateCooler::processEvent(EvModeBtn *event)
+bool StateStopped::processEvent(EvPowerBtn *event)
 {
     std::cout << "Proces Event .... Action" << std::endl;
     //perform transition here

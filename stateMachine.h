@@ -1,3 +1,4 @@
+#pragma once
 #include "state.h"
 
 class StateMachine : public State

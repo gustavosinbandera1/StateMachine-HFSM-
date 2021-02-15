@@ -2,10 +2,10 @@
 #include "events.h"
 #include "state.h"
 
-class EvModeBtn : public Event
+class EvSpeedBtn : public Event
 {
 public:
     virtual bool processFrom(State *state);
-    EvModeBtn();
-    ~EvModeBtn();
+    EvSpeedBtn();
+    ~EvSpeedBtn();
 };

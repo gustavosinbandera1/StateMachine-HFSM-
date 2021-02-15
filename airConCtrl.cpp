@@ -1,19 +1,19 @@
-#include "stateCooler.h"
+#include "airConCtrl.h"
 #include <iostream>
 using namespace std;
 
 
-void StateCooler::onEntryAction()
+void AirConCtrl::onEntryAction()
 {
     std::cout << "onEntryCooler Action" << std::endl;
 }
 
-void StateCooler::onExitAction()
+void AirConCtrl::onExitAction()
 {
     std::cout << "onExitCooler Action" << std::endl;
 }
 
-bool StateCooler::processEvent(EvModeBtn *event)
+bool AirConCtrl::processEvent(EvPowerBtn *event)
 {
     std::cout << "Proces Event .... Action" << std::endl;
     //perform transition here

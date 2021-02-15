@@ -13,17 +13,6 @@ public:
 };
 
 
-
-class EvSpeedBtn : public Event {
-    public:
-    virtual bool processFrom(State *state);
-};
-
-class EvPowerBtn : public Event {
-    public:
-    virtual bool processFrom(State *state);
-};
-
 class EvOne : public Event {
     public:
     virtual bool processFrom(State *state);

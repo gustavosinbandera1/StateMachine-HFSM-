@@ -1,13 +1,13 @@
 #pragma once
-#include "state.h"
+#include "stateMachine.h"
 
-class StateCooler : public State
+class StateMode : public StateMachine
 {
 public:
-    StateCooler(int noOf){
+    StateMode(int noOf){
         this->noOfRegions = noOf;
     };
-    virtual ~StateCooler(){};
+    virtual ~StateMode(){};
 
     virtual bool dispatchEvent(Event *event);
     virtual void entry(void);
@@ -25,6 +25,6 @@ protected:
     void onExitAction();
 
 private:
-    StateCooler(const StateCooler &);
-    StateCooler &operator=(const StateCooler &);
+    StateMode(const StateMode &);
+    StateMode &operator=(const StateMode &);
 };

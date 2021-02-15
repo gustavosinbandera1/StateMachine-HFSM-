@@ -1,13 +1,13 @@
 #pragma once
 #include "state.h"
 
-class StateCooler : public State
+class StateHigh : public State
 {
 public:
-    StateCooler(int noOf){
+    StateHigh(int noOf){
         this->noOfRegions = noOf;
     };
-    virtual ~StateCooler(){};
+    virtual ~StateHigh(){};
 
     virtual bool dispatchEvent(Event *event);
     virtual void entry(void);
@@ -15,7 +15,7 @@ public:
     virtual void restoreDeepHistory(void);
     virtual void restoreShallowHistory();
 
-   bool processEvent(EvModeBtn *event);
+   bool processEvent(EvSpeedBtn *event);
 
 protected:
     int noOfRegions;
@@ -25,6 +25,6 @@ protected:
     void onExitAction();
 
 private:
-    StateCooler(const StateCooler &);
-    StateCooler &operator=(const StateCooler &);
+    StateHigh(const StateHigh &);
+    StateHigh &operator=(const StateHigh &);
 };
