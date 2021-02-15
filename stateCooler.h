@@ -1,28 +1,29 @@
 #pragma once
 #include "state.h"
+#include "airConCtrlCtx.h"
+#include "stateMode.h" //parent of this state
 
+class StateMode;
+class State;
+//class AirConCtx;
 class StateCooler : public State
 {
 public:
-    StateCooler(void){
-/*         this->noOfRegions = noOf; */
-    };
+    StateCooler(StateMode *ancestor, AirConCtrlCtx *context) : ancestor(ancestor),
+                                                               context(context)
+    {
+        return;
+    }
     virtual ~StateCooler(){};
-
-    virtual bool dispatchEvent(Event *event);
-    virtual void entry(void);
-    virtual void exit(void);
-    virtual void restoreDeepHistory(void);
-    virtual void restoreShallowHistory();
-
-   bool processEvent(EvModeBtn *event);
+    bool processEvent(EvModeBtn *event);
 
 protected:
-
     void onEntryAction();
     void onExitAction();
 
 private:
     StateCooler(const StateCooler &);
     StateCooler &operator=(const StateCooler &);
+    StateMode *ancestor;
+    AirConCtrlCtx *context;
 };

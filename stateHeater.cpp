@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+ StateHeater::StateHeater(StateMode *ancestor, AirConCtrlCtx *context)
+    :ancestor(ancestor),
+    context(context){}  
 
 void StateHeater::onEntryAction()
 {

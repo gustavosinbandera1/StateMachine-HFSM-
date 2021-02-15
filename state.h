@@ -1,5 +1,6 @@
 #pragma once
 #include "events.h"
+//#include "parallelState.h"
 
 class EvSpeedBtn;
 class EvPowerBtn;
@@ -9,7 +10,7 @@ class State
 {
 private:
 public:
-    State();
+    State(){};
     virtual ~State() { return; };
     virtual bool dispatchEvent(Event *event);
 
