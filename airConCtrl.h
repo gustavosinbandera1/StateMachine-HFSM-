@@ -8,6 +8,7 @@ class AirConCtrl : public StateMachine
 {
 public:
     AirConCtrl(void){
+        std::cout <<"Constructor AirConCtx"<<std::endl;
         this->context = new AirConCtrlCtx();
     };
     virtual ~AirConCtrl(){};

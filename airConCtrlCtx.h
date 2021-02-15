@@ -1,9 +1,10 @@
 #pragma once
-
+#include "iostream"
 class AirConCtrlCtx
 {
 public:
     AirConCtrlCtx(void){
+        std::cout <<"constructor AirConCtrlCtx..."<<std::endl;
     };
     virtual ~AirConCtrlCtx(){};
     void coolOn(){};
