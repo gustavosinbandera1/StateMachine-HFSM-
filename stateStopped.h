@@ -1,26 +1,21 @@
 #pragma once
-#include "stateMachine.h"
+#include "state.h"
+#include "airConCtrl.h"
+#include "airConCtrlCtx.h"
 
-class StateStopped : public StateMachine
+class State;
+class AirConCtrl;
+class StateStopped : public State
 {
 public:
-    StateStopped(void){
-    };
+    StateStopped(AirConCtrl *ancestor, AirConCtrlCtx *context);
     virtual ~StateStopped(){};
-
-    virtual bool dispatchEvent(Event *event);
-    virtual void entry(void);
-    virtual void exit(void);
-    virtual void restoreDeepHistory(void);
-    virtual void restoreShallowHistory();
-
-   bool processEvent(EvPowerBtn *event);
+    bool processEvent(EvPowerBtn *event);
 
 protected:
-    //void onEntryAction();
-    //void onExitAction();
-
 private:
     StateStopped(const StateStopped &);
     StateStopped &operator=(const StateStopped &);
+    AirConCtrl *ancestor;
+    AirConCtrlCtx *context;
 };

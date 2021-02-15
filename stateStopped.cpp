@@ -3,16 +3,10 @@
 using namespace std;
 
 
-/* void StateStopped::onEntryAction()
-{
-    std::cout << "onEntryCooler Action" << std::endl;
-}
+ StateStopped::StateStopped(AirConCtrl *ancestor, AirConCtrlCtx *context)
+    :ancestor(ancestor),
+    context(context){}  
 
-void StateStopped::onExitAction()
-{
-    std::cout << "onExitCooler Action" << std::endl;
-}
- */
 bool StateStopped::processEvent(EvPowerBtn *event)
 {
     std::cout << "Proces Event .... State stopped" << std::endl;

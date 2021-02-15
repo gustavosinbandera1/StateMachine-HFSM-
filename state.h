@@ -1,7 +1,5 @@
 #pragma once
 #include "events.h"
-//#include "parallelState.h"
-
 class EvSpeedBtn;
 class EvPowerBtn;
 class EvModeBtn;

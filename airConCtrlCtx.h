@@ -8,6 +8,12 @@ public:
     virtual ~AirConCtrlCtx(){};
     void coolOn(){};
     void coolOff(){};
+    bool tempIsNormal(){
+        return true;
+    }
+    void enableButtons(){
+        //enabling buttons
+    }
 
 
 protected:
