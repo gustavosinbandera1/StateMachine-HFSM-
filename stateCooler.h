@@ -15,6 +15,10 @@ public:
     virtual void restoreDeepHistory(void);
     virtual void restoreShallowHistory();
 
+   bool processEvent(EvModeBtn *event);
+
+
+
 protected:
     int noOfRegions;
     State **regions;

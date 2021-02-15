@@ -1,6 +1,7 @@
 #pragma once
 #include "events.h"
 
+class EvModeBtn;
 class EvDefault;
 class State
 {
@@ -9,6 +10,8 @@ public:
     State();
     virtual ~State(){return;};
     virtual bool dispatchEvent(Event *event);
+
+
     virtual void entry(void);
     virtual void exit(void);
     virtual void restoreDeepHistory(void);
@@ -18,8 +21,8 @@ public:
     virtual bool processEvent(EvDefault *) { return false; }
 
     //application specific events
-    //  virtual bool processEvent(EvPowerBtn *) { return false; }
-    // virtual bool processEvent(EvModeBtn *) { return false; }
+    //virtual bool processEvent(EvPowerBtn *) { return false; }
+     virtual bool processEvent(EvModeBtn *) { return false; }
     // virtual bool processEvent(EvSpeedBtn *) { return false; }
     // virtual bool processEvent(EvOne *) { return false; }
 

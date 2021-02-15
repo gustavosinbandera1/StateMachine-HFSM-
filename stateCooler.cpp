@@ -12,8 +12,9 @@ void StateCooler::onExitAction()
 {
     std::cout << "onExitCooler Action" << std::endl;
 }
-/*
-void StateCooler::processEvent(EvModeBtn *event)
+
+bool StateCooler::processEvent(EvModeBtn *event)
 {
-    return this->ances
-} */
+    //perform transition here
+    return true;
+}   
