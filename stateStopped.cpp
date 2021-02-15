@@ -9,7 +9,7 @@ using namespace std;
 
 bool StateStopped::processEvent(EvPowerBtn *event)
 {
-    std::cout << "Proces Event .... State stopped" << std::endl;
+    std::cout << "Proces Event .... State stopped.. ready to do transition" << std::endl;
     //perform transition here
     return true;
 }   

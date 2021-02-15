@@ -2,10 +2,19 @@
 #include "events.h"
 #include "state.h"
 
+class State;
+class Event;
+
 class EvPowerBtn : public Event
 {
 public:
-    virtual bool processFrom(State *state);
-    EvPowerBtn();
-    ~EvPowerBtn();
+    EvPowerBtn(){return;};
+    virtual ~EvPowerBtn(){return;};
+    //virtual bool processFrom(State *state);
+     bool processFrom(State *state)
+    {
+        std::cout << "procesing event Power Button...bb " << std::endl;
+        return state->processEvent(this);
+    }; 
+
 };

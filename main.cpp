@@ -5,13 +5,18 @@
 #include "airConCtrl.h"
 #include "stateMode.h"
 #include "stateStopped.h"
-#include "airConCtrl.h"
+#include "airConCtrlCtx.h"
+#include "evPowerBtn.h"
 
 EvDefault aEvDefault; 
 
 int main(){
 AirConCtrl *air = new AirConCtrl();
+//AirConCtrlCtx *context = new AirConCtrlCtx();
+//air->dispatchEvent();
 
-//StateStopped stopped = new StateStopped(air,);
+EvPowerBtn evPowerBtn; //= new EvPowerBtn();
+
+air->dispatchEvent(&evPowerBtn);
     return 0;
 }

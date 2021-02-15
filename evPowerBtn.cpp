@@ -1,14 +1,15 @@
 #include "evPowerBtn.h"
+#include <iostream>
 
-
-bool EvPowerBtn::processFrom(State* state){
+ bool EvPowerBtn::processFrom(State* state){
+    std::cout <<"procesing event Power Button... " << std::endl;
     return state->processEvent(this);
 }
-
- EvPowerBtn::EvPowerBtn(){
+ 
+/*  EvPowerBtn::EvPowerBtn(){
     return;
 } 
-
- EvPowerBtn::~EvPowerBtn(){
+ */
+/*  EvPowerBtn::~EvPowerBtn(){
     return;
-} 
+}  */

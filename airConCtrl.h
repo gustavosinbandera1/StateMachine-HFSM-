@@ -9,16 +9,20 @@ class AirConCtrl : public StateMachine
 public:
     AirConCtrl(void){
         std::cout <<"Constructor AirConCtx"<<std::endl;
-        this->context = new AirConCtrlCtx();
+        this->activeSubstate = new State();
+        this->previousSubstate = new State();
+        //this->context = new AirConCtrlCtx();
+        //this->stopped = new StateStopped();
     };
     virtual ~AirConCtrl(){};
-    bool processEvent(EvPowerBtn *event);
-    bool transition(StateStopped* stateStopped, EvPowerBtn *evPowerBtn );
+    //bool processEvent(EvPowerBtn *event);
+    //bool transition(StateStopped* stateStopped, EvPowerBtn *evPowerBtn );
     ///void transition(StateOperating* stateOperating, EvPowerBtn evPowerBtn );
 
 protected:
 private:
     AirConCtrl(const AirConCtrl &);
     AirConCtrl &operator=(const AirConCtrl &);
-    AirConCtrlCtx *context;
+    //AirConCtrlCtx *context;
+    //StateStopped *stopped;
 };

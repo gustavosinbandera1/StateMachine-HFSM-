@@ -15,5 +15,5 @@ public:
 
 class EvOne : public Event {
     public:
-    virtual bool processFrom(State *state);
+    virtual bool processFrom(State *state) = 0;
 }; 
