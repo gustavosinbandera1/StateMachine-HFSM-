@@ -3,19 +3,14 @@
 using namespace std;
 
 
-void AirConCtrl::onEntryAction()
-{
-    std::cout << "onEntryCooler Action" << std::endl;
-}
-
-void AirConCtrl::onExitAction()
-{
-    std::cout << "onExitCooler Action" << std::endl;
-}
-
 bool AirConCtrl::processEvent(EvPowerBtn *event)
 {
-    std::cout << "Proces Event .... Action" << std::endl;
+    //do transition here
+    std::cout << "Proces Event .... air controll" << std::endl;
     //perform transition here
     return true;
 }   
+
+void AirConCtrl::transition(StateStopped* stateStopped, EvPowerBtn *evPowerBtn ){
+
+}

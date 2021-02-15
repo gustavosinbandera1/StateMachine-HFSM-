@@ -4,8 +4,8 @@
 class StateCooler : public State
 {
 public:
-    StateCooler(int noOf){
-        this->noOfRegions = noOf;
+    StateCooler(void){
+/*         this->noOfRegions = noOf; */
     };
     virtual ~StateCooler(){};
 
@@ -18,8 +18,6 @@ public:
    bool processEvent(EvModeBtn *event);
 
 protected:
-    int noOfRegions;
-    State **regions;
 
     void onEntryAction();
     void onExitAction();

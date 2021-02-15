@@ -4,8 +4,7 @@
 class StateHeater : public State
 {
 public:
-    StateHeater(int noOf){
-        this->noOfRegions = noOf;
+    StateHeater(void){
     };
     virtual ~StateHeater(){};
 
@@ -18,9 +17,6 @@ public:
    bool processEvent(EvModeBtn *event);
    
 protected:
-    int noOfRegions;
-    State **regions;
-
     void onEntryAction();
     void onExitAction();
 

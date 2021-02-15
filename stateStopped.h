@@ -1,11 +1,10 @@
 #pragma once
-#include "state.h"
+#include "stateMachine.h"
 
-class StateStopped : public State
+class StateStopped : public StateMachine
 {
 public:
-    StateStopped(int noOf){
-        this->noOfRegions = noOf;
+    StateStopped(void){
     };
     virtual ~StateStopped(){};
 
@@ -18,11 +17,8 @@ public:
    bool processEvent(EvPowerBtn *event);
 
 protected:
-    int noOfRegions;
-    State **regions;
-
-    void onEntryAction();
-    void onExitAction();
+    //void onEntryAction();
+    //void onExitAction();
 
 private:
     StateStopped(const StateStopped &);

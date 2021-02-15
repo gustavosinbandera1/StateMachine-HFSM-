@@ -1,29 +1,19 @@
 #pragma once
 #include "stateMachine.h"
+#include "stateStopped.h"
+//#include "stateOperating.h"
 
 class AirConCtrl : public StateMachine
 {
 public:
-    AirConCtrl(int noOf){
-        this->noOfRegions = noOf;
+    AirConCtrl(void){
     };
     virtual ~AirConCtrl(){};
-
-    virtual bool dispatchEvent(Event *event);
-    virtual void entry(void);
-    virtual void exit(void);
-    virtual void restoreDeepHistory(void);
-    virtual void restoreShallowHistory();
-
-   bool processEvent(EvPowerBtn *event);
+    bool processEvent(EvPowerBtn *event);
+    void transition(StateStopped* stateStopped, EvPowerBtn *evPowerBtn );
+    ///void transition(StateOperating* stateOperating, EvPowerBtn evPowerBtn );
 
 protected:
-    int noOfRegions;
-    State **regions;
-
-    void onEntryAction();
-    void onExitAction();
-
 private:
     AirConCtrl(const AirConCtrl &);
     AirConCtrl &operator=(const AirConCtrl &);

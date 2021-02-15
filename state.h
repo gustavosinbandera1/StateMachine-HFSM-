@@ -25,7 +25,6 @@ public:
     virtual bool processEvent(EvPowerBtn *) { return false; }
     virtual bool processEvent(EvSpeedBtn *) { return false; }
     //virtual bool processEvent(EvOne *) { return false; }
-    // virtual bool processEvent(EvOne *) { return false; }
 
 protected:
     virtual void onEntryAction(void);
