@@ -1,15 +1,21 @@
 #include "evPowerBtn.h"
 #include <iostream>
 
- bool EvPowerBtn::processFrom(State* state){
-    std::cout <<"procesing event Power Button... " << std::endl;
-    return state->processEvent(this);
+bool EvPowerBtn::processFrom(State *state)
+{
+    bool retval;
+    std::cout << "procesing event Power Button... " << std::endl;
+    retval =  state->processEvent(this);
+    std::cout<<"retval: " << retval <<std::endl;
+    return retval;
 }
- 
-/*  EvPowerBtn::EvPowerBtn(){
+
+EvPowerBtn::EvPowerBtn()
+{
     return;
-} 
- */
-/*  EvPowerBtn::~EvPowerBtn(){
+}
+
+EvPowerBtn::~EvPowerBtn()
+{
     return;
-}  */
+}

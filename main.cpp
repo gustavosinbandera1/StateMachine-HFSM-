@@ -17,6 +17,8 @@ AirConCtrl *air = new AirConCtrl();
 
 EvPowerBtn evPowerBtn; //= new EvPowerBtn();
 
+
+air->dispatchEvent(&evPowerBtn);
 air->dispatchEvent(&evPowerBtn);
     return 0;
 }
