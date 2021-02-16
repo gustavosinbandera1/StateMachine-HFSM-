@@ -9,11 +9,15 @@ public:
     virtual ~AirConCtrlCtx(){};
     void coolOn(){};
     void coolOff(){};
-    bool tempIsNormal(){
-        return true;
+    bool tempIsNormal(int temp){
+            if(temp < 127){
+               return true; 
+            }
+        return false;
     }
     void enableButtons(){
         //enabling buttons
+        std::cout << "Enabling Buttons" << std::endl;
     }
 
 

@@ -4,6 +4,8 @@ class EvSpeedBtn;
 class EvPowerBtn;
 class EvModeBtn;
 class EvDefault;
+class EvOne;
+#include "iostream"
 class State
 {
 private:
@@ -18,12 +20,16 @@ public:
     virtual void restoreShallowHistory(void);
 
     //general events
-    virtual bool processEvent(EvDefault *) { return false; }
+    virtual bool processEvent(EvDefault *ev) {
+            std::cout << "---o--- " <<typeid(ev).name() << std::endl;
+        std::cout<<"working here"<<std::endl;
+         return false; 
+         }
     //application specific events
     virtual bool processEvent(EvModeBtn *) { return false; }
     virtual bool processEvent(EvPowerBtn *) { return false; }
     virtual bool processEvent(EvSpeedBtn *) { return false; }
-    //virtual bool processEvent(EvOne *) { return false; }
+    virtual bool processEvent(EvOne *) { return false; }
 
 protected:
     virtual void onEntryAction(void);

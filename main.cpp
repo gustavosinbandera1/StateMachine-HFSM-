@@ -7,8 +7,9 @@
 #include "stateStopped.h"
 #include "airConCtrlCtx.h"
 #include "evPowerBtn.h"
+#include "EvOne.h"
 
-EvDefault aEvDefault; 
+ 
 
 int main(){
 AirConCtrl *air = new AirConCtrl();
@@ -16,9 +17,10 @@ AirConCtrl *air = new AirConCtrl();
 //air->dispatchEvent();
 
 EvPowerBtn evPowerBtn; //= new EvPowerBtn();
-
+EvOne evOne;
 
 air->dispatchEvent(&evPowerBtn);
-air->dispatchEvent(&evPowerBtn);
+//air->dispatchEvent(&evPowerBtn);
+//air->dispatchEvent(&evOne);
     return 0;
 }

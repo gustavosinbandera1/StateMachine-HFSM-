@@ -11,9 +11,3 @@ public:
     virtual ~Event(){return ; }
     virtual bool processFrom(State *) = 0;
 };
-
-
-class EvOne : public Event {
-    public:
-    virtual bool processFrom(State *state) = 0;
-}; 

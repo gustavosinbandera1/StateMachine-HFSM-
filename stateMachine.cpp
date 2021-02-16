@@ -1,15 +1,17 @@
 #include "stateMachine.h"
 #include "EvDefault.h"
 #include <iostream>
-extern EvDefault aEvDefault;
 
 bool StateMachine::dispatchEvent(Event *event)
 {
 
-    std::cout << "going to dispatch event" << std::endl;
+    //EvDefault aEvDefault;
+    std::cout << "dispaching event --> " << typeid(event).name() << std::endl;
+    std::cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>going to dispatch event>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << std::endl;
     bool retval = this->activeSubstate->dispatchEvent(event) || event->processFrom(this);
-    std::cout << "end-----------going to dispatch event---------end" << std::endl;
-    aEvDefault.processFrom(this);
+    std::cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Event Dispached>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << std::endl;
+
+    //aEvDefault.processFrom(this);
     return retval;
 }
 
@@ -22,6 +24,7 @@ void StateMachine::entry(void)
 
 void StateMachine::exit(void)
 {
+    std::cout << "saliendo---------------------------------" << std::endl;
     this->activeSubstate->exit();
     this->previousSubstate = this->activeSubstate;
     this->activeSubstate = nullptr;
@@ -49,7 +52,4 @@ void StateMachine::restoreShallowHistory(void)
 
 StateMachine::StateMachine(void)
     : activeSubstate(NULL),
-      previousSubstate(NULL){
-          /*activeSubstate = nullptr;
-        previousSubstate = nullptr; */
-      };
+      previousSubstate(NULL){};
