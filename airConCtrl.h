@@ -3,8 +3,8 @@
 #include "stateStopped.h"
 #include "airConCtrlCtx.h"
 #include "stateOperating.h"
-class StateStopped;
-class StateOperating;
+//class StateStopped;
+//class StateOperating;
 class AirConCtrl : public StateMachine
 {
 public:
